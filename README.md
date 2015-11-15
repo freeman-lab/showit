@@ -21,6 +21,7 @@ from showit import image
 im = random.rand(25, 25, 3)
 image(im)
 ```
+![](https://s3.amazonaws.com/documentation-samples/showit/image.png)
 
 options
 
@@ -42,6 +43,7 @@ from showit import tile
 ims = random.rand(9, 25, 25, 3)
 tile(ims)
 ```
+![](https://s3.amazonaws.com/documentation-samples/showit/tile.png)
 
 options
 
