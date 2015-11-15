@@ -22,12 +22,12 @@ image(im)
 
 options
 
-- `cmap` Color map to use (default `gray`)
-- `bar` Whether to show a color bar (default `False`)
-- `nans` Whether to replace NaNs with 0 (default `True`)
-- `clim` Limit for colormap (default `None`)
-- `size` Size of figure (default is largest square grid)
-- `ax` An existing axis to plot into
+- `cmap` : color map to use (default `gray`)
+- `bar` : whether to show a color bar (default `False`)
+- `nans` : whether to replace NaNs with 0 (default `True`)
+- `clim` : limit for colormap (default `None`)
+- `size` : size of figure (default is largest square grid)
+- `ax` : an existing axis to plot into (default `None`)
 
 ### tile
 
@@ -43,10 +43,10 @@ tile(ims)
 
 options
 
-- `cmap` Color map to use (default `gray`)
-- `bar` Whether to show a color bar (default `False`)
-- `nans` Whether to replace NaNs with 0 (default `True`)
-- `clim` Limit for colormap (default `None`)
-- `grid` Grid dimensions to use (default is largest square grid)
-- `size` Size of figure (default is largest square grid)
-- `axis` Which axis to index images with
+- `cmap` : color map to use (default `gray`)
+- `bar` : whether to show a color bar (default `False`)
+- `nans` : whether to replace NaNs with 0 (default `True`)
+- `clim` : limit for colormap (default `None`)
+- `grid` : grid dimensions to use (default is largest square grid)
+- `size` : size of figure (default is largest square grid)
+- `axis` : which axis to index images with (default `0`)
