@@ -1,6 +1,6 @@
 # showit
 
-Simple and sensible display of images
+simple and sensible display of images, no axes, no interpolation, no frills
 
 ### install
 
