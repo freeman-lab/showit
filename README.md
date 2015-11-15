@@ -22,24 +22,12 @@ image(im)
 
 options
 
-####`cmap`
-Color map to use (default `gray`)
-
-####`bar`
-Whether to show a color bar (default `False`)
-
-####`nans`
-Whether to replace NaNs with 0 (default `True`)
-
-####`clim`
-Limit for colormap (default `None`)
-
-####`size`
-Size of figure (default is largest square grid)
-
-####`ax`
-An existing axis to plot into
-
+- `cmap` Color map to use (default `gray`)
+- `bar` Whether to show a color bar (default `False`)
+- `nans` Whether to replace NaNs with 0 (default `True`)
+- `clim` Limit for colormap (default `None`)
+- `size` Size of figure (default is largest square grid)
+- `ax` An existing axis to plot into
 
 ### tile
 
@@ -55,26 +43,10 @@ tile(ims)
 
 options
 
-####`cmap`
-Color map to use (default `gray`)
-
-####`bar`
-Whether to show a color bar (default `False`)
-
-####`nans`
-Whether to replace NaNs with 0 (default `True`)
-
-####`clim`
-Limit for colormap (default `None`)
-
-####`grid`
-Grid dimensions to use (default is largest square grid)
-
-####`size`
-Size of figure (default is largest square grid)
-
-####`size`
-Size of figure (default is largest square grid)
-
-####`axis`
-Which axis to index images with
+- `cmap` Color map to use (default `gray`)
+- `bar` Whether to show a color bar (default `False`)
+- `nans` Whether to replace NaNs with 0 (default `True`)
+- `clim` Limit for colormap (default `None`)
+- `grid` Grid dimensions to use (default is largest square grid)
+- `size` Size of figure (default is largest square grid)
+- `axis` Which axis to index images with
