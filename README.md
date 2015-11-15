@@ -10,7 +10,7 @@ pip install showit
 
 ### usage 
 
-###`image`
+####`image`
 
 displays a 2D or 3D array as an image
 
@@ -31,7 +31,7 @@ options
 - `size` : size of figure (default is largest square grid)
 - `ax` : an existing axis to plot into (default `None`)
 
-###`tile`
+####`tile`
 
 displays many 2D / 3D images as tiles in a grid
 
