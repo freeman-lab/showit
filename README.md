@@ -29,7 +29,7 @@ options
 - `bar` : whether to show a color bar (default `False`)
 - `nans` : whether to replace NaNs with 0 (default `True`)
 - `clim` : limit for colormap (default `None`)
-- `size` : size of figure (default is largest square grid)
+- `size` : size of figure (default `7`)
 - `ax` : an existing axis to plot into (default `None`)
 
 ####`tile`
@@ -52,5 +52,5 @@ options
 - `nans` : whether to replace NaNs with 0 (default `True`)
 - `clim` : limit for colormap (default `None`)
 - `grid` : grid dimensions to use (default is largest square grid)
-- `size` : size of figure (default is largest square grid)
+- `size` : size of figure (default `7`)
 - `axis` : which axis to index images with (default `0`)
