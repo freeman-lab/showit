@@ -31,8 +31,6 @@ options
 - `size` : size of figure (default is largest square grid)
 - `ax` : an existing axis to plot into (default `None`)
 
-### usage 
-
 ###`tile`
 
 displays many 2D / 3D images as tiles in a grid
