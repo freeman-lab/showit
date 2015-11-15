@@ -93,7 +93,7 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
                   cbar_mode=cbar_mode, cbar_size="5%", cbar_pad="5%")
 
     for i, im in enumerate(imgs):
-        ax = g[i].imshow(im, cmap=cmap[i], interpolation='none', clim=clim[i])
+        ax = g[i].imshow(im, cmap=cmap[i], interpolation='nearest', clim=clim[i])
         g[i].axis('off')
 
         if bar:
@@ -154,9 +154,9 @@ def image(img, cmap='gray', bar=False, nans=True, clim=None, size=7, ax=None):
         mx = img.max()
         if mn < 0.0 or mx > 1.0:
             raise ValueError("Values must be between 0.0 and 1.0 for RGB images, got range (%g, %g)" % (mn, mx))
-        im = ax.imshow(img, interpolation='none', clim=clim)
+        im = ax.imshow(img, interpolation='nearest', clim=clim)
     else:
-        im = ax.imshow(img, cmap=cmap, interpolation='none', clim=clim)
+        im = ax.imshow(img, cmap=cmap, interpolation='nearest', clim=clim)
 
     if bar is True:
         cb = colorbar(im, fraction=0.046, pad=0.04)
