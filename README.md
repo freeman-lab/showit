@@ -12,7 +12,7 @@ pip install showit
 
 displays a 2D or 3D array as an image
 
-```
+```python
 from numpy import random
 from showit import image
 
