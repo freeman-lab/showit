@@ -18,7 +18,7 @@ displays a 2D or 3D array as an image
 from numpy import random
 from showit import image
 
-im = random.randn(25, 25)
+im = random.rand(25, 25, 3)
 image(im)
 ```
 
@@ -39,7 +39,7 @@ displays many 2D / 3D images as tiles in a grid
 from numpy import random
 from showit import tile
 
-ims = random.randn(9, 25, 25)
+ims = random.rand(9, 25, 25, 3)
 tile(ims)
 ```
 
