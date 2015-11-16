@@ -37,6 +37,9 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
 
     axis : int, optional, default = 0
         Which axis of array indexes images
+
+    fig : matplotlib figure, optional, default = None
+        An existing figure to plot on
     """
     from matplotlib.pyplot import figure, colorbar
     from mpl_toolkits.axes_grid1 import ImageGrid
@@ -54,7 +57,8 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
     if (nans is True) and (imgs[0].dtype != bool):
         imgs = [nan_to_num(im) for im in imgs]
 
-    fig = figure(figsize=(size, size))
+    if fig is None:
+        fig = figure(figsize=(size, size))
 
     if bar is True:
         axes_pad = 0.4
