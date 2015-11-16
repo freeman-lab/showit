@@ -1,6 +1,6 @@
 from numpy import ndarray, rollaxis, asarray, nan_to_num, ceil, sqrt
 
-def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, axis=0):
+def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, axis=0, fig=None):
     """
     Display a collection of images as a grid of tiles
 
