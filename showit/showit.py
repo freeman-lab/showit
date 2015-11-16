@@ -96,6 +96,7 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
     g = ImageGrid(fig, 111, nrows_ncols=grid, axes_pad=axes_pad,
                   cbar_mode=cbar_mode, cbar_size="5%", cbar_pad="5%")
 
+    axes = []
     for i, im in enumerate(imgs):
         ax = g[i].imshow(im, cmap=cmap[i], interpolation='nearest', clim=clim[i])
         g[i].axis('off')
@@ -106,12 +107,14 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
             cb.set_ticks([around(cb.vmin + rng, 1), around(cb.vmax - rng, 1)])
             cb.outline.set_visible(False)
 
+        axes.append(ax)
+
     if nimgs < ngrid:
         for i in range(nimgs, ngrid):
             g[i].axis('off')
             g[i].cax.axis('off')
 
-    return g
+    return axes
 
 def image(img, cmap='gray', bar=False, nans=True, clim=None, size=7, ax=None):
     """
