@@ -107,6 +107,8 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
             g[i].axis('off')
             g[i].cax.axis('off')
 
+    return g
+
 def image(img, cmap='gray', bar=False, nans=True, clim=None, size=7, ax=None):
     """
     Streamlined display of images using matplotlib.
@@ -165,3 +167,5 @@ def image(img, cmap='gray', bar=False, nans=True, clim=None, size=7, ax=None):
         cb.outline.set_visible(False)
 
     axis('off')
+
+    return im
