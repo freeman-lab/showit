@@ -114,7 +114,7 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
             g[i].axis('off')
             g[i].cax.axis('off')
 
-    return axes
+    return axes, g
 
 def image(img, cmap='gray', bar=False, nans=True, clim=None, size=7, ax=None):
     """
