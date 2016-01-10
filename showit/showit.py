@@ -1,4 +1,4 @@
-from numpy import ndarray, rollaxis, asarray, nan_to_num, ceil, sqrt
+from numpy import ndarray, rollaxis, asarray, nan_to_num, ceil, sqrt, around
 
 def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, axis=0, fig=None):
     """
