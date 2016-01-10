@@ -1,6 +1,6 @@
 # showit
 
-simple and sensible display of images, no axes, no interpolation, no frills
+simple and sensible display of images in python, no axes, no interpolation, no frills
 
 ### install
 
