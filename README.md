@@ -1,6 +1,11 @@
 # showit
 
-simple and sensible display of images in python, no axes, no interpolation, no frills
+[![Latest Version](https://img.shields.io/pypi/v/showit.svg?style=flat-square)](https://pypi.python.org/pypi/showit)
+[![Build Status](https://img.shields.io/travis/freeman-lab/showit/master.svg?style=flat-square)](https://travis-ci.org/freeman-lab/showit) 
+
+> simple and sensible display of images in python
+
+Really simple image display with [`matplotlib`](https://github.com/matplotlib/matplotlib). Just shows images. No axes, no interpolation, no frills.
 
 ### install
 
