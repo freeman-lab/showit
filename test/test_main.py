@@ -1,5 +1,8 @@
 from numpy import random
+import matplotlib
 from showit import image, tile
+
+matplotlib.use('Agg')
 
 def test_image():
 	im = random.randn(25, 25)
