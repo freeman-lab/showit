@@ -45,12 +45,11 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
     from mpl_toolkits.axes_grid1 import ImageGrid
 
     if not isinstance(imgs, list):
-        if isinstance(imgs, ndarray):
-            if (axis < 0) | (axis >= imgs.ndim):
-                raise ValueError("Must specify a valid axis to index the images")
-            imgs = list(rollaxis(imgs, axis, 0))
-        else:
-            raise ValueError("Must provide a list of images, or an ndarray")
+        if not isinstance(imgs, ndarray):
+            imgs = asarray(imgs)        
+        if (axis < 0) | (axis >= imgs.ndim):
+            raise ValueError("Must specify a valid axis to index the images")
+        imgs = list(rollaxis(imgs, axis, 0))
 
     imgs = [asarray(im) for im in imgs]
 
