@@ -39,7 +39,7 @@ options
 
 #### `tile`
 
-displays many 2D / 3D images as tiles in a grid
+displays many 2D or 3D images as tiles in a grid
 
 ```python
 from numpy import random
