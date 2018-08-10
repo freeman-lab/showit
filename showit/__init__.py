@@ -1,23 +1,17 @@
 import json
 import os
+
+from pkg_resources import resource_string
+
 from .showit import (tile, image)
 
 def get_version():
-    version_json = None
-    dirname = os.path.dirname(__file__)
-    for candidatepath in (
-            [dirname, ".."], # this is the non-installed path
-            [dirname, "..", "..", "..", "..", "share", "showit"],
-            ):
-        try:
-            candidatepath.append("VERSION")
-            with open(os.path.join(*candidatepath), "r") as fh:
-                version_json = json.loads(fh.read())
-        except (IOError, OSError):
-            pass
-
-    if version_json is None:
-        raise ValueError("Cannot find VERSION file")
+    try:
+        # decode('utf-8') is used for python3.4, which reads all files as bytes.
+        version_json = json.loads(
+            resource_string(__name__, "VERSION").decode('utf-8'))
+    except Exception as ex:
+        raise ValueError("Cannot find VERSION file", ex)
 
     return version_json['string']
 

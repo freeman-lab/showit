@@ -3,7 +3,7 @@
 import json
 from setuptools import setup
 
-with open('VERSION', 'r') as fh:
+with open('showit/VERSION', 'r') as fh:
     version = json.loads(fh.read())
 
 setup(
@@ -16,5 +16,5 @@ setup(
     url='https://github.com/freeman-lab/showit',
     install_requires=open('requirements.txt').read().split(),
     long_description='See https://github.com/freeman-lab/showit',
-    data_files=[('share/showit', ['VERSION'])],
+    include_package_data=True,
 )
