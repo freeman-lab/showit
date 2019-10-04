@@ -59,3 +59,4 @@ options
 - `grid` : grid dimensions to use (default is largest square grid)
 - `size` : size of figure (default `7`)
 - `axis` : which axis to index images with (default `0`)
+- `titles` : titles to add to each image (default `None`)

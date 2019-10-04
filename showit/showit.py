@@ -1,6 +1,6 @@
 from numpy import ndarray, rollaxis, asarray, nan_to_num, ceil, sqrt, around
 
-def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, axis=0, fig=None):
+def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, axis=0, fig=None, titles=None):
     """
     Display a collection of images as a grid of tiles
 
@@ -40,6 +40,9 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
 
     fig : matplotlib figure, optional, default = None
         An existing figure to plot on
+
+    titles : list of str, optional, default = None
+        Titles to add to each plot in the grid
     """
     from matplotlib.pyplot import figure, colorbar
     from mpl_toolkits.axes_grid1 import ImageGrid
@@ -92,6 +95,9 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
     if ngrid < nimgs:
         raise ValueError("Total grid count %g too small for number of images %g" % (ngrid, nimgs))
 
+    if len(titles) != nimgs:
+        raise ValueError("Number of titles %g does equal number of images %g" % (len(titles), nimgs))
+
     g = ImageGrid(fig, 111, nrows_ncols=grid, axes_pad=axes_pad,
                   cbar_mode=cbar_mode, cbar_size="5%", cbar_pad="5%")
 
@@ -105,6 +111,9 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
             rng = abs(cb.vmax - cb.vmin) * 0.05
             cb.set_ticks([around(cb.vmin + rng, 1), around(cb.vmax - rng, 1)])
             cb.outline.set_visible(False)
+
+        if titles is not None:
+            g[i].set_title(titles[i])
 
         axes.append(ax)
 
