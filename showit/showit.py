@@ -95,8 +95,9 @@ def tile(imgs, cmap='gray', bar=False, nans=True, clim=None, grid=None, size=9, 
     if ngrid < nimgs:
         raise ValueError("Total grid count %g too small for number of images %g" % (ngrid, nimgs))
 
-    if len(titles) != nimgs:
-        raise ValueError("Number of titles %g does equal number of images %g" % (len(titles), nimgs))
+    if titles is not None:
+        if len(titles) != nimgs:
+            raise ValueError("Number of titles %g does equal number of images %g" % (len(titles), nimgs))
 
     g = ImageGrid(fig, 111, nrows_ncols=grid, axes_pad=axes_pad,
                   cbar_mode=cbar_mode, cbar_size="5%", cbar_pad="5%")
